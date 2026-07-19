@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumina Agent — Autonomous AI Trading Intelligence</title>
+<meta name="description" content="Lumina Agent is an autonomous AI trading agent powering the $LUMINA token, built for on-chain market intelligence, risk-aware execution, and continuous strategy learning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+<canvas id="glow-canvas"></canvas>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="header">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 100 100" width="28" height="28">
+          <path d="M40 18 L58 8 L58 62 L78 62 L78 72 L40 72 Z" fill="currentColor"/>
+          <path d="M50 4 L54 14 L64 16 L54 18 L50 28 L46 18 L36 16 L46 14 Z" fill="currentColor" class="spark"/>
+          <path d="M18 58 C18 74 32 86 50 86 C68 86 82 74 82 58 C82 68 68 76 50 76 C32 76 18 68 18 58 Z" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="brand-name">Lumina<span class="brand-accent">Agent</span></span>
+    </a>
+
+    <nav class="main-nav" id="main-nav">
+      <a href="#intelligence">Intelligence</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#token">$LUMINA</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#token" class="btn btn-ghost">Docs</a>
+      <a href="#token" class="btn btn-primary">Launch App</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy" data-reveal>
+        <p class="eyebrow"><span class="dot"></span>Live on-chain · Robinhood Chain</p>
+        <h1>Trade smarter with an agent that never sleeps.</h1>
+        <p class="hero-lede">
+          Lumina Agent is an autonomous trading intelligence built to read markets, weigh risk, and act
+          in the time it takes a human to open a chart. It runs around the clock across on-chain liquidity,
+          continuously refining its own strategy from every trade it makes — and every holder of
+          <strong>$LUMINA</strong> shares in what it learns.
+        </p>
+        <div class="hero-actions">
+          <a href="#token" class="btn btn-primary btn-lg">
+            Get $LUMINA
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#how-it-works" class="btn btn-outline btn-lg">See how it works</a>
+        </div>
+
+        <dl class="hero-stats" id="hero-stats">
+          <div class="stat">
+            <dt>Total Volume Routed</dt>
+            <dd data-count="4820000" data-prefix="$">$0</dd>
+          </div>
+          <div class="stat">
+            <dt>Decisions / Day</dt>
+            <dd data-count="182400">0</dd>
+          </div>
+          <div class="stat">
+            <dt>Agent Uptime</dt>
+            <dd data-count="99.98" data-decimals="2" data-suffix="%">0%</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="hero-visual" data-reveal data-reveal-delay="1">
+        <div class="visual-glow" aria-hidden="true"></div>
+        <img src="assets/hero-robot.png" alt="Abstract render of the Lumina Agent — a luminous, liquid-chrome AI presence with glowing green circuitry" class="hero-robot">
+        <div class="visual-ring" aria-hidden="true"></div>
+        <div class="floating-card card-top">
+          <span class="fc-label">Strategy Confidence</span>
+          <span class="fc-value">94.2%</span>
+        </div>
+        <div class="floating-card card-bottom">
+          <span class="fc-label">Last Action</span>
+          <span class="fc-value">Rebalanced · 4s ago</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="marquee" aria-label="Deployed on">
+      <p class="marquee-label">Deployed &amp; verified on</p>
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <span>Robinhood Chain</span><span>Virtuals.io</span><span>Chainlink Oracles</span><span>Etherscan Verified</span><span>Audited by Halborn</span>
+        </div>
+        <div class="marquee-group" aria-hidden="true">
+          <span>Robinhood Chain</span><span>Virtuals.io</span><span>Chainlink Oracles</span><span>Etherscan Verified</span><span>Audited by Halborn</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INTELLIGENCE / FEATURES ============ -->
+  <section class="section" id="intelligence">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Core Intelligence</p>
+        <h2>Three systems, one mind.</h2>
+        <p class="section-lede">
+          Lumina Agent isn't a single model bolted onto a wallet. It's three cooperating systems —
+          perception, judgment, and execution — that hand decisions off to one another in milliseconds,
+          so every position is opened with context and closed with discipline.
+        </p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card" data-reveal>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M3 17l5-5 4 4 8-8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Market Perception</h3>
+          <p>
+            Lumina ingests order-book depth, on-chain flow, and cross-venue price action in real time,
+            building a live model of where liquidity is thin, where it's crowded, and where the next
+            move is likely to originate. It doesn't react to candles — it reads the market underneath them.
+          </p>
+        </article>
+
+        <article class="feature-card" data-reveal data-reveal-delay="1">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.5 12l2 2 3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Risk-Aware Judgment</h3>
+          <p>
+            Every signal is weighed against a strict risk budget before it's allowed near capital.
+            Position sizing, correlation exposure, and drawdown limits are enforced by rule, not vibes —
+            so the agent is built to survive bad weeks, not just win good ones.
+          </p>
+        </article>
+
+        <article class="feature-card" data-reveal data-reveal-delay="2">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h7l-1 8 11-14h-7l1-6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Autonomous Execution</h3>
+          <p>
+            Once a decision clears its own risk checks, Lumina routes and executes on-chain directly —
+            no dashboard to babysit, no order to place by hand. Trades settle in the open, verifiable by
+            anyone, block by block.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="section section-alt" id="how-it-works">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">How It Works</p>
+        <h2>From signal to settlement.</h2>
+        <p class="section-lede">
+          The full loop runs continuously, but it breaks down into four honest steps — nothing hidden
+          behind a black box you're asked to trust blindly.
+        </p>
+      </div>
+
+      <div class="steps">
+        <div class="step" data-reveal>
+          <span class="step-index">01</span>
+          <h3>Observe</h3>
+          <p>Streams live order-book, volume, and on-chain data across every venue Lumina is connected to, refreshed multiple times per second.</p>
+        </div>
+        <div class="step" data-reveal data-reveal-delay="1">
+          <span class="step-index">02</span>
+          <h3>Model</h3>
+          <p>Scores opportunities against a learned model of market regime, then discards anything that doesn't clear a minimum confidence threshold.</p>
+        </div>
+        <div class="step" data-reveal data-reveal-delay="2">
+          <span class="step-index">03</span>
+          <h3>Check</h3>
+          <p>Runs every surviving idea through fixed risk rules — position limits, exposure caps, drawdown guards — before capital ever moves.</p>
+        </div>
+        <div class="step" data-reveal data-reveal-delay="3">
+          <span class="step-index">04</span>
+          <h3>Execute</h3>
+          <p>Settles the trade on-chain, logs the outcome, and feeds the result back into the model for the next cycle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TOKEN ============ -->
+  <section class="section" id="token">
+    <div class="wrap token-wrap">
+      <div class="token-copy" data-reveal>
+        <p class="eyebrow">The Token</p>
+        <h2>$LUMINA is how you hold a stake in the agent itself.</h2>
+        <p class="section-lede">
+          $LUMINA isn't a side ticket to the project — it's the asset the agent is built around.
+          Holding it means holding a claim on an autonomous system that gets sharper with every
+          cycle it runs, deployed transparently on Robinhood Chain and indexed through Virtuals.io
+          for anyone to verify.
+        </p>
+
+        <div class="token-grid">
+          <div class="token-fact">
+            <span class="tf-label">Ticker</span>
+            <span class="tf-value mono">$LUMINA</span>
+          </div>
+          <div class="token-fact">
+            <span class="tf-label">Network</span>
+            <span class="tf-value mono">Robinhood Chain</span>
+          </div>
+          <div class="token-fact">
+            <span class="tf-label">Framework</span>
+            <span class="tf-value mono">Virtuals.io</span>
+          </div>
+          <div class="token-fact">
+            <span class="tf-label">Contract</span>
+            <span class="tf-value mono contract-value">
+              <span id="contract-address">0x0000...LUMINA</span>
+              <button class="copy-btn" id="copy-btn" aria-label="Copy contract address">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="9" y="9" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M5 15V5a2 2 0 012-2h10" stroke="currentColor" stroke-width="1.6"/></svg>
+              </button>
+            </span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary btn-lg">Buy on Virtuals.io</a>
+          <a href="#" class="btn btn-outline btn-lg">Read the Whitepaper</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section section-alt" id="faq">
+    <div class="wrap faq-wrap">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Questions</p>
+        <h2>Before you dive in.</h2>
+      </div>
+
+      <div class="faq-list" data-reveal>
+        <details class="faq-item" open>
+          <summary>What does Lumina Agent actually trade?</summary>
+          <p>Lumina operates across on-chain liquidity pools and listed pairs reachable from Robinhood Chain, focusing on venues with enough depth for its risk model to size positions responsibly.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do I need to do anything after buying $LUMINA?</summary>
+          <p>No. Holding the token is the extent of participation required — the agent operates independently of any individual holder's action.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is the agent's activity verifiable?</summary>
+          <p>Yes. Every trade Lumina executes settles on-chain and is publicly visible, and the contract is indexed and verifiable through Virtuals.io.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What happens during periods of high volatility?</summary>
+          <p>Lumina's risk layer widens its confidence thresholds and reduces position sizing automatically — it is designed to trade less, not harder, when conditions turn unstable.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a href="#top" class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 100 100" width="24" height="24">
+            <path d="M40 18 L58 8 L58 62 L78 62 L78 72 L40 72 Z" fill="currentColor"/>
+            <path d="M50 4 L54 14 L64 16 L54 18 L50 28 L46 18 L36 16 L46 14 Z" fill="currentColor" class="spark"/>
+            <path d="M18 58 C18 74 32 86 50 86 C68 86 82 74 82 58 C82 68 68 76 50 76 C32 76 18 68 18 58 Z" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="brand-name">Lumina<span class="brand-accent">Agent</span></span>
+      </a>
+      <p>Autonomous AI trading intelligence, deployed on Robinhood Chain.</p>
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="#intelligence">Intelligence</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#token">$LUMINA Token</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="#">Whitepaper</a>
+        <a href="#">Audit Report</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Community</h4>
+        <a href="#">X / Twitter</a>
+        <a href="#">Telegram</a>
+        <a href="#">Discord</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© 2026 Lumina Agent. All trades are executed autonomously and settle on-chain.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
